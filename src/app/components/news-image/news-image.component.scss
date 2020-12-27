@@ -1,0 +1,25 @@
+:host {
+    display: block;
+}
+
+.news-image {
+    background-color: #e0e0e0;
+    overflow: hidden;
+
+    &__content {
+        width: 100%;
+        height: auto;
+        transition: transform 0.3s ease;
+        // Pure css hover solution
+        // @media (hover: hover) {
+        //     &:hover {
+        //         transform: scale(1.05);
+        //     }
+        // }
+
+        // Event driven solution
+        &.is-hovering {
+            transform: scale(1.05);
+        }
+    }
+}

@@ -1,0 +1,12 @@
+<div class="search-input">
+    <mat-form-field class="search-input__field" color="custom-primary">
+        <mat-label>Search</mat-label>
+        <input matInput type="text" [(ngModel)]="search" (ngModelChange)="handleValueChanged($event)" />
+        <mat-progress-bar
+            color="custom-primary"
+            mode="indeterminate"
+            *ngIf="loading"
+            class="search-input__loader"
+        ></mat-progress-bar>
+    </mat-form-field>
+</div>

@@ -1,0 +1,57 @@
+:host {
+    display: block;
+}
+
+.comments {
+    &__hd {
+        margin-bottom: 40px;
+    }
+
+    &__list {
+        list-style-type: none;
+        list-style-image: none;
+        padding: 0 0 40px 0;
+        margin: 0 0 0px 0;
+    }
+
+    &__list-li {
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+        border-bottom: 1px solid #efefef;
+        display: flex;
+        align-items: flex-start;
+    }
+
+    &__avatar {
+        margin-right: 30px;
+        overflow: hidden;
+        border-radius: 100%;
+        height: 80px;
+        position: relative;
+        flex: 0 0 80px;
+    }
+
+    &__avatar-img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        line-height: 1em;
+    }
+
+    &__author {
+        font-size: 16px;
+        margin: 0;
+    }
+
+    &__date {
+        margin-left: auto;
+        font-size: 14px;
+    }
+}

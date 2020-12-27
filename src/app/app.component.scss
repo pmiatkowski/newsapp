@@ -1,0 +1,36 @@
+.top-nav {
+    position: fixed;
+    top: 0;
+    left: 10px;
+    right: 10px;
+    z-index: 100;
+
+    &::before {
+        display: block;
+        content: ' ';
+        height: 10px;
+        border-radius: 40%;
+        position: absolute;
+        bottom: 0;
+        left: 10px;
+        right: 10px;
+        box-shadow: 0px 0px 10px rgba(black, 0.3);
+        z-index: 1;
+    }
+}
+.news-app-toolbar {
+    position: relative;
+    z-index: 2;
+}
+
+.news-app-menu {
+    margin-right: 10px;
+}
+
+.news-app-icon {
+    padding: 0 14px;
+}
+
+.news-app-spacer {
+    flex: 1 1 auto;
+}

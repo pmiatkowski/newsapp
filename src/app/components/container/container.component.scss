@@ -1,0 +1,12 @@
+:host {
+    display: block;
+}
+.container-fluid {
+    max-width: 1200px;
+    background-color: white;
+
+    @media (min-width: 992px) {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}

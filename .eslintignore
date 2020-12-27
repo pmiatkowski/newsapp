@@ -1,0 +1,6 @@
+node_modules/**
+dist
+karma.conf.js
+lint-staged.config.js
+lint-staged.js
+e2e/**

@@ -1,0 +1,19 @@
+<app-container [topOffset]="40">
+    <div class="row">
+        <app-search-input
+            [loading]="isLoading"
+            (onChanged)="searchVal$.next($event)"
+            class="col col-sm-12 col-md-4"
+        ></app-search-input>
+    </div>
+
+    <div class="row" *ngIf="showNoResults">
+        <h1 class="col col-sm-12 news__no-results">No articles found for "{{ search }}"</h1>
+    </div>
+
+    <div class="row">
+        <div class="col col-lg-4 col-md-6 col-sm-12" *ngFor="let article of articles; trackBy: trackBy">
+            <app-news-item class="article-item" [item]="article"></app-news-item>
+        </div>
+    </div>
+</app-container>

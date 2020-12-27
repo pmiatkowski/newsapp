@@ -1,0 +1,23 @@
+<div class="comments">
+    <header class="comments__hd">
+        <h2 class="comments__title">{{ commentsTitle }}</h2>
+    </header>
+
+    <ul class="comments__list">
+        <li class="comments__list-li" *ngFor="let comment of comments">
+            <div class="comments__avatar" *ngIf="comment.avatar">
+                <img width="80" height="80" [alt]="comment.name" [src]="comment.avatar" class="comments__avatar-img" />
+            </div>
+
+            <div class="comments__content">
+                <div class="comments__header">
+                    <h4 class="comments__author">{{ comment.name }}</h4>
+                    <time class="comments__date">{{ comment.date | date }}</time>
+                </div>
+                <div class="comments__bd">
+                    {{ comment.comment }}
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>

@@ -1,0 +1,12 @@
+<div class="news-image">
+    <img
+        (mouseenter)="handleImageHoverStart()"
+        (mouseleave)="handleImageHoverEnd()"
+        [width]="width"
+        [height]="height"
+        [src]="imgSource"
+        [alt]="alt"
+        class="news-image__content"
+        [ngClass]="{ 'is-hovering': isHoveringImage }"
+    />
+</div>

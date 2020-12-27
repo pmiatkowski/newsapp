@@ -1,0 +1,44 @@
+<app-container [topOffset]="0">
+    <div *ngIf="article$ | async as article">
+        <app-hero-image class="news-detail__hero-image" [src]="article.urlToImage"></app-hero-image>
+
+        <main class="news-detail__main">
+            <article class="news-detail__bd">
+                <header class="news-detail__hd">
+                    <h1 class="news-detail__title">{{ article.title }}</h1>
+                </header>
+
+                <div class="news-detail__content" [innerHtml]="article.content | desc"></div>
+
+                <div class="news-detail__actions">
+                    <button
+                        mat-flat-button
+                        color="primary"
+                        class="news-detail__read-more"
+                        (click)="goToArticle(article.url)"
+                    >
+                        Read more
+                    </button>
+                </div>
+            </article>
+            <aside class="news-detail__aside">
+                <ul class="news-detail__summary">
+                    <li class="news-detail__summary-li" *ngIf="article.source.name">
+                        {{ article.source.name }}
+                    </li>
+                    <li class="news-detail__summary-li" *ngIf="article.author">
+                        {{ article.author }}
+                    </li>
+                    <li class="news-detail__summary-li">
+                        {{ article.publishedAt | date }}
+                    </li>
+                    <li class="news-detail__summary-li -highlight">{{ comments.length }} Comments</li>
+                </ul>
+            </aside>
+        </main>
+
+        <section class="news-detail__comments-sec">
+            <app-comments [comments]="comments"></app-comments>
+        </section>
+    </div>
+</app-container>

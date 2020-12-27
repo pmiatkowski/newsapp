@@ -1,0 +1,38 @@
+@import 'src/styles/_vars';
+
+:host::ng-deep {
+    display: block;
+
+    .mat-progress-bar {
+        &.mat-custom-primary {
+            .mat-progress-bar-buffer {
+                background-color: lighten($primary-color, 30%);
+            }
+
+            .mat-progress-bar-fill {
+                &::after {
+                    background-color: $primary-color;
+                }
+            }
+        }
+    }
+
+    .mat-form-field.mat-focused .mat-form-field-label {
+        color: $primary-color;
+    }
+
+    .mat-focused .mat-form-field-underline .mat-form-field-ripple {
+        background-color: $primary-color;
+    }
+}
+
+.search-input {
+    &__field {
+        display: block;
+    }
+
+    &__loader {
+        position: absolute;
+        bottom: 0;
+    }
+}
